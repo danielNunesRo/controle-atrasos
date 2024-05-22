@@ -56,15 +56,14 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-                <source>1.8</source> <!-- depending on your project -->
-                <target>1.8</target> <!-- depending on your project -->
+                <source>1.8</source> 
+                <target>1.8</target>
                 <annotationProcessorPaths>
                     <path>
-                        <groupId>org.mapstruct</groupId>
-                        <artifactId>mapstruct-processor</artifactId>
-                        <version>${org.mapstruct.version}</version>
-                    </path>
-                    <!-- other annotation processors -->
+							<groupId>org.mapstruct</groupId>
+							<artifactId>mapstruct-processor</artifactId>
+							<version>${org.mapstruct.version}</version>
+						</path>
                 </annotationProcessorPaths>
             </configuration>
 			</plugin>

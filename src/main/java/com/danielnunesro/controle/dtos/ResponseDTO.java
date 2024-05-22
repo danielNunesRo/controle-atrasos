@@ -3,7 +3,7 @@ package com.danielnunesro.controle.dtos;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class RequestDTO {
+public class ResponseDTO {
 	
 	private String name;
 	
@@ -11,12 +11,11 @@ public class RequestDTO {
 	
 	private LocalTime hours;
 	
-	public RequestDTO() {
+	public ResponseDTO() {
 		
 	}
 
-	public RequestDTO(String name, LocalDate date, LocalTime hours) {
-		super();
+	public ResponseDTO(String name, LocalDate date, LocalTime hours) {
 		this.name = name;
 		this.date = date;
 		this.hours = hours;
@@ -46,8 +45,6 @@ public class RequestDTO {
 		this.hours = hours;
 	}
 	
-	
-
 	
 	
 	

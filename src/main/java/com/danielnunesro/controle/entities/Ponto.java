@@ -1,21 +1,32 @@
 package com.danielnunesro.controle.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
-public class Ponto {
+@Table(name = "tb_ponto")
+public class Ponto implements Serializable {
 	
+
+	private static final long serialVersionUID = 1L;
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
+	@Column(nullable = false)
 	private String name;
-	
+	@Column(nullable = false)
 	private LocalDate date;
-	
+	@Column(nullable = false)
 	private LocalTime hours;
 	
 	private Ponto() {
@@ -26,8 +37,8 @@ public class Ponto {
 		super();
 		this.id = id;
 		this.name = name;
-		this.date = LocalDate.now();
-		this.hours = LocalTime.now();
+		this.date = date;
+		this.hours = hours;
 	}
 
 	public Long getId() {
